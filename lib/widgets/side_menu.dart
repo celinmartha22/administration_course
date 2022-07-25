@@ -41,12 +41,12 @@ class SideMenu extends StatelessWidget {
                             size: 20,
                             color: active,
                             weight: FontWeight.bold)),
-                             SizedBox(width: _width / 48),
+                    SizedBox(width: _width / 48),
                   ],
                 ),
                 SizedBox(
-                      height: 30,
-                    ),
+                  height: 30,
+                ),
               ],
             ),
           Divider(
@@ -66,8 +66,9 @@ class SideMenu extends StatelessWidget {
                         menuController.changeActiveItmeTo(itemName);
                         if (ResponsiveWidget.isSmallScreen(context)) {
                           Get.back();
-                          // TO DO:: go to item name route
                         }
+                        // TO DO:: go to item name route
+                        navigationController.navigateTo(itemName);
                       }
                     }))
                 .toList(),
