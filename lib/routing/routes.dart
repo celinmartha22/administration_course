@@ -1,3 +1,5 @@
+import 'dart:html';
+
 const OverViewPageRoute = "Overview";
 const CoursesPageRoute = "Courses";
 const StudentsPageRoute = "Students";
@@ -8,8 +10,9 @@ const CategoryPageRoute = "Category";
 const IncomesPageRoute = "Incomes";
 const ExpensesPageRoute = "Expenses";
 const ReportsPageRoute = "Reports";
+const AuthenticationPageRoute = "Logout";
 
-List sideMenu = [
+List sideMenuItems = [
   OverViewPageRoute,
   CoursesPageRoute,
   StudentsPageRoute,
@@ -19,5 +22,6 @@ List sideMenu = [
   CategoryPageRoute,
   IncomesPageRoute,
   ExpensesPageRoute,
-  ReportsPageRoute
+  ReportsPageRoute,
+  AuthenticationPageRoute
 ];

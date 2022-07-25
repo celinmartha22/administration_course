@@ -33,7 +33,32 @@ class MenuController extends GetxController {
 
   /// Mengembalikan widget dasar dari [itemName]
   Widget returnIconFor(String itemName) {
-    return Container();
+    switch (itemName) {
+      case OverViewPageRoute:
+        return _customIcon(Icons.trending_up, itemName);
+      case CoursesPageRoute:
+        return _customIcon(Icons.book, itemName);
+      case StudentsPageRoute:
+        return _customIcon(Icons.account_box, itemName);
+      case TeamsPageRoute:
+        return _customIcon(Icons.supervisor_account, itemName);
+      case InvoicesPageRoute:
+        return _customIcon(Icons.inventory_sharp, itemName);
+      case PayrollPageRoute:
+        return _customIcon(Icons.payment, itemName);
+      case CategoryPageRoute:
+        return _customIcon(Icons.grid_view, itemName);
+      case IncomesPageRoute:
+        return _customIcon(Icons.input, itemName);
+      case ExpensesPageRoute:
+        return _customIcon(Icons.output, itemName);
+      case ReportsPageRoute:
+        return _customIcon(Icons.feed, itemName);
+      case AuthenticationPageRoute:
+        return _customIcon(Icons.exit_to_app, itemName);
+      default:
+        return _customIcon(Icons.exit_to_app, itemName);
+    }
   }
 
   Widget _customIcon(IconData icon, String itemName) {
@@ -47,9 +72,6 @@ class MenuController extends GetxController {
     }
 
     /// jika tidak aktif, makan cek [isHovering], jika iya maka warna icon = [dark], jika tidak = [lightGrey]
-    return Icon(
-      icon,
-      color: isHovering(itemName) ? dark : lightGrey
-    );
+    return Icon(icon, color: isHovering(itemName) ? dark : lightGrey);
   }
 }

@@ -1,9 +1,12 @@
+import 'package:administration_course/controllers/menu_controller.dart';
 import 'package:administration_course/layout.dart';
 import 'package:charts_flutter/flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
+  Get.put(MenuController());  /// me-Register [MenuController]
   runApp(const MyApp());
 }
 

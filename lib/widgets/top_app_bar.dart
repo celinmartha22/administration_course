@@ -9,7 +9,7 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
     AppBar(
       elevation: 0,
       iconTheme: IconThemeData(color: dark),
-      backgroundColor: Colors.transparent,
+      backgroundColor: light,
 
       /// if [isSmallScreen] then show the menu icon, else show the logo
       leading: !ResponsiveWidget.isSmallScreen(context)
